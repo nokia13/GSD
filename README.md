@@ -1,6 +1,6 @@
 # GSD
 
-Hemsida framarbetad utifrån originalet http://granssnittsdesign.se/
+Hemsida framarbetad utifrån http://granssnittsdesign.se/
 
 Innehållet på sidan administreras nu från Craft CMS.
 
