@@ -1,0 +1,78 @@
+{% extends "_layout" %}
+{% block main %}
+
+
+	<div class="pages-header">
+		<div class="content-wrapper">
+			{% block header %}
+
+				<div class="dropdown">
+					<button class="dropbtn">▼</button>
+					<div class="dropdown-content">
+						{% for entry in craft.entries.section("pages").all() %}
+							<a href="{{entry.url}}">
+								<div class="h1">
+									{{entry.rubrik}}
+								</div>
+							</a>
+						{% endfor %}
+					</div>
+				</div>
+
+				{% for entry in craft.entries.section('header').all() %}
+
+					<span class="pages-hrubrik" style='color:white'>
+						{{entry.rubrik}}
+					</span>
+
+				{% endfor %}
+				<div class="homebutton" style='color:white'>
+					<a href="/">
+						<p>⌂</p>
+					</a>
+				</div>
+			</div>
+
+		{% endblock %}
+	</div>
+
+	<div class="page-content-wrapper">
+
+		{% set assets = entry.ikon %}
+		{% if assets.Url is defined %}
+
+			{% for item in assets %}
+				<img class="pages-ikon" src="{{ item.Url }}">
+
+			{% endfor %}
+		{% endif %}
+
+
+		<div class="pages-rubrik">
+			{{entry.rubrik}}
+		</div>
+
+		<div class="brodtext">
+			{{ entry.brodtext}}
+		</div>
+
+
+		{% set criteria = craft.entries.section('pages') %}
+
+		{% set prev = entry.getPrev(criteria) %}
+		{% set next = entry.getNext(criteria) %}
+
+
+		<div class="clearfix">
+			{% if prev %}
+				<a class="button" href="{{ prev.url }}">Tidigare</a>
+			{% endif %}
+			{% if next %}
+				<a class="button" href="{{ next.url }}">Nästa inlägg</a>
+			{% endif %}
+			<a class="button" href="/">Startsidan</a>
+		</div>
+
+	</div>
+
+{% endblock %}

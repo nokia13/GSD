@@ -1,0 +1,16 @@
+#shrinkheader {
+  overflow: hidden;
+  background-color: black;
+  padding: 0px 0px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 9999;
+  margin: auto 0;
+}
+
+#shrinktext {
+  font-size: 16px;
+  transition: 0.4s;
+}

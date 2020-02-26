@@ -1,0 +1,63 @@
+{% extends "_layout" %}
+
+{% block main %}
+
+	<div id="shrinkheader">
+		<div class="content-wrapper">
+			{% block header %}
+
+				{% for entry in craft.entries.section('header').all() %}
+
+					<div class="hrubrik" style='color:white'>
+						{{entry.rubrik}}
+					</div>
+
+					<div class="htext">
+						<div id="shrinktext">
+							{{entry.headertext}}
+						</div>
+					</div>
+				{% endfor %}
+
+			{% endblock %}
+
+		</div>
+	</div>
+
+	<div class="content-wrapper">
+
+		<div class="summary-container">
+
+			{% for entry in craft.entries.section("pages").all() %}
+
+				<div class="summary">
+
+					<a href="{{ entry.url }}">
+						<div class="ikon-wrapper">
+							{% set assets = entry.ikon %}
+							{% if assets.Url is defined %}
+
+								{% for item in assets %}
+									<img class="ikon" src="{{ item.Url }}">
+
+								{% endfor %}
+
+							{% endif %}
+						</div>
+
+						<div class="rubrik">
+							{{entry.rubrik}}
+						</div>
+
+						<div class="ingress">
+							<p class="ingress">{{ entry.ingress}}</p>
+						</div>
+					</a>
+
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
