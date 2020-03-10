@@ -13,19 +13,10 @@ body {
   min-height: 100vh;
 }
 
-.wrapAll {
-  position: relative;
-}
 .content-wrapper {
   max-width: 300px;
   margin: 0 auto;
   max-height: 100%;
-}
-
-.content-wrapper-head {
-  max-width: 300px;
-  margin: 0 auto;
-  height: auto;
 }
 
 .summary-container {
