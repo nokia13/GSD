@@ -1,6 +1,6 @@
 #shrinkheader {
   overflow: hidden;
-  background-color: black;
+  background: url(../ikoner/footer-bg.png);
   padding: 0px 0px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
@@ -11,6 +11,7 @@
 }
 
 #shrinktext {
+  font-family: 'Signika Negative', sans-serif;
   font-size: 16px;
   transition: 0.4s;
 }

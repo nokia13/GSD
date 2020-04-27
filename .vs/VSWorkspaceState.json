@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config\\redactor",
+    "\\templates",
+    "\\templates\\page",
+    "\\web"
+  ],
+  "SelectedNode": "\\templates\\page\\index.twig",
+  "PreviewInSolutionExplorer": false
+}

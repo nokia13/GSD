@@ -2,6 +2,7 @@
 
 {% block main %}
 
+	<!--Moving animated header-->
 	<div id="shrinkheader">
 		<div class="content-wrapper">
 			{% block header %}
@@ -30,21 +31,20 @@
 
 			{% for entry in craft.entries.section("pages").all() %}
 
+				<!--Summary "cards" at homepage -->
 				<div class="summary">
 
 					<a href="{{ entry.url }}">
+
 						<div class="ikon-wrapper">
 							{% set assets = entry.ikon %}
 							{% if assets.Url is defined %}
-
 								{% for item in assets %}
 									<img class="ikon" src="{{ item.Url }}">
 
 								{% endfor %}
-
 							{% endif %}
 						</div>
-
 						<div class="rubrik">
 							{{entry.rubrik}}
 						</div>
@@ -52,6 +52,7 @@
 						<div class="ingress">
 							<p class="ingress">{{ entry.ingress}}</p>
 						</div>
+
 					</a>
 
 				</div>

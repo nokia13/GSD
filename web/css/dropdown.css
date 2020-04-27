@@ -1,32 +1,16 @@
 .dropbtn {
-  background-color: black;
+  background: url(../ikoner/footer-bg.png);
   color: white;
-  padding-top: 15px;
-  font-size: 16px;
-  border: none;
   cursor: pointer;
-}
-
-.homebutton {
-  padding: 0 20px;
-  background-color: black;
-  color: white;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+  margin-top: 19px;
+  padding-right: 10px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
+  font-family: 'Signika Negative', sans-serif;
 
   min-width: 203px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
