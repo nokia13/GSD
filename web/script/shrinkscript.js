@@ -1,12 +1,15 @@
-var ipad = window.matchMedia("(min-width: 768px)");
-var fullscreen = window.matchMedia("(min-width: 1080px)");
+let ipad = window.matchMedia("(min-width: 768px)");
+let fullscreen = window.matchMedia("(min-width: 1080px)");
 
 function myFunction() {
-  if (ipad.matches) {
+  if (fullscreen.matches) {
+    scrollFunction("0px", "90px");
+  }
+  else if (ipad.matches) {
     scrollFunction("0px", "130px");
-  } else if (fullscreen.matches) {
-    scrollFunction("1000px", "1000px");
-  } else {
+  }
+
+  else {
     scrollFunction("0px", "220px");
   }
 }

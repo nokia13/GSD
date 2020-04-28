@@ -18,21 +18,17 @@
 				</div>
 			</div>
 
-
-			{% for entry in craft.entries.section('header').all() %}
-
-				<div class="pages-hrubrik" style='color:white'>
-					{{entry.rubrik}}
+				<div class="pages-header-rubrik">
+					{% for entry in craft.entries.section('header').all() %}
+					<a href="/">{{entry.rubrik}}</a>
+					{% endfor %}
 				</div>
 
-			{% endfor %}
 	</div>
-
-
-
-
-
 </div>
+
+
+
 		{% endblock %}
 	<div class="page-nav">
 
@@ -45,14 +41,18 @@
 
 			{% if prev %}
 				<div class="prev">
-				<img  src="../ikoner/prev.svg" href="{{ prev.url }}"></a>
+					<a href="{{ prev.url }}">
+						<img src="../ikoner/prev.svg">
+					</a>
 				</div>
 			{% endif %}
 
 
 			{% if next %}
 				<div class="next">
-				<img  src="../ikoner/next.svg" href="{{ next.url }}"></a>
+					<a href="{{ next.url }}">
+				<img  src="../ikoner/next.svg" >
+					</a>
 				</div>
 			{% endif %}
 
@@ -76,7 +76,7 @@
 				</div>
 
 
-			<div class="clearfix">
+			<div class="navbuttons-mobile">
 				{% set criteria = craft.entries.section('pages') %}
 				{% set prev = entry.getPrev(criteria) %}
 				{% set next = entry.getNext(criteria) %}
@@ -92,10 +92,7 @@
 					{% if next %}
 						<a class="button" href="/">Hem</a>
 					{% endif %}
-
-
 			</div>
 		</div>
-
 	</div>
 {% endblock %}

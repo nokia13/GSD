@@ -1,5 +1,5 @@
 * {
-  outline: 1px dashed white;
+  //outline: 1px dashed white;
   font-family: 'Signika Negative', sans-serif;
 }
 html,
@@ -20,9 +20,9 @@ body {
 }
 
 .summary-container {
-  padding-top: 333px;
   display: grid;
   box-sizing: border-box;
+  padding-top: 333px;
   margin: 0 auto;
   row-gap: 30px;
   column-gap: 30px;
@@ -32,18 +32,19 @@ body {
   display: flex;
   box-sizing: border-box;
   background: url(../ikoner/body-bg.png);
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-
-  justify-self: center;
-  max-width: 300px;
-
-  transition: all 0.5s; /* Animation */
   margin: 0 auto;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+
+  justify-self: center;
+  max-width: 300px;
+
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  transition: all 0.5s; /* Animation */
+
 }
 
 .rubrik {
@@ -53,9 +54,8 @@ body {
 }
 
 .ingress {
-
   color: white;
-
+/* fade på texten på korten.
   -webkit-mask-image: -webkit-gradient(
     linear,
     left top,
@@ -64,9 +64,8 @@ body {
     to(rgba(0, 0, 0, 0))
   );
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+ */
 }
-
-
 
 .rubrik .ingress {
   box-sizing: border-box;
@@ -158,10 +157,18 @@ body {
     padding-left: 50px;
     padding-right: 50px;
   }
-  .htext {
+  .header-text {
     font-size: 14px;
     color: white;
     max-width: 600px;
+  }
+  .header-rubrik {
+    align-self: center;
+    color: #fff;
+  }
+
+  .header-text {
+    font-size: 20px;
   }
 
   .ikon {
@@ -171,13 +178,8 @@ body {
     min-width: 70px;
   }
 
-  .hrubrik {
-    align-self: center;
-  }
 
-  .htext {
-    font-size: 20px;
-  }
+
 
 }
 @media only screen and (min-width: 1080px) {
@@ -202,13 +204,10 @@ body {
   .header {
     max-width: 100%;
   }
-  .htext {
+  .header-text {
     color: white;
     max-width: 900px;
   }
 
-  .hrubrik {
-    color: #fff;
-    align-self: center;
-  }
+
 }

@@ -23,9 +23,18 @@
   background: url(../ikoner/footer-bg.png);
   width: 100%;
 }
-.pages-hrubrik {
-  text-align: center;
+
+
+.pages-header-rubrik a,
+.pages-header-rubrik a:active
+.pages-header-rubrik a:hover
+.pages-header-rubrik a:visited{
+text-decoration: none;
+color:white;
+text-align: center;
+color:white;
 }
+
 
 .pages-header .content-wrapper {
   font-size: 16px;
@@ -35,6 +44,7 @@
 }
 
 .prev{
+visibility: hidden;
   width: 100px;
   height: 100px;
 
@@ -45,6 +55,7 @@
   margin: auto 10px;
 }
 .next{
+visibility: hidden;
   width: 100px;
   height: 100px;
 
@@ -55,6 +66,9 @@
   margin: auto -70px;
 }
 
+.home-button{
+       visibility: hidden;
+    }
 
 @media only screen and (min-width: 768px) {
 
@@ -65,11 +79,38 @@
   }
 
   .prev{
+  visibility: visible;
+  width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+
     margin: auto 50px;
   }
   .next{
+  visibility: visible;
+  width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+
     margin: auto -30px;
   }
+
+  .navbuttons-mobile{
+      visibility: hidden;
+    }
+
+    .home-button{
+       visibility: visible;
+    }
+
 }
 
 @media only screen and (min-width: 1080px) {
