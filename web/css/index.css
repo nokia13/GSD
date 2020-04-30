@@ -1,9 +1,10 @@
 * {
-  //outline: 1px dashed white;
+  outline: 1px dashed white;
   font-family: 'Signika Negative', sans-serif;
 }
 html,
 body {
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -89,10 +90,19 @@ body {
 .footer {
   box-sizing: border-box;
   background: url(../ikoner/footer-bg.png);
-
-  color: white;
-  padding: 7px;
+  color: darkred;
+  padding: 10px;
+  margin-top: 30px;
 }
+
+.footer a,
+.footer a:active
+.footer a:hover
+.footer a:visited{
+  text-decoration: none;
+  color: #d12100;
+}
+
 
 .footer-margin {
   margin-top: 30px;
@@ -113,8 +123,6 @@ body {
   min-height: 70px;
   width: 100%;
 }
-
-
 
 .summary a,
 .summary a:active,
@@ -137,15 +145,12 @@ body {
   cursor: pointer;
 }
 
-
-
 @media only screen and (min-width: 768px) {
 
   .content-wrapper {
     box-sizing: border-box;
     max-width: 600px;
   }
-
 
   .summary-container {
     padding-top: 250px;
@@ -177,10 +182,6 @@ body {
     min-height: 70px;
     min-width: 70px;
   }
-
-
-
-
 }
 @media only screen and (min-width: 1080px) {
   .content-wrapper {

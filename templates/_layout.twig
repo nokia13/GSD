@@ -19,19 +19,13 @@
 
 		{% block main %}{% endblock %}
 
-		<div class="footer-margin">
+
 			<div class="footer">
 				<div class="content-wrapper">
-					<div class="footer-info"></div>
-
 					{% for entry in craft.entries.section('footer').all() %}
-						<div>
-							{{entry.text}}
-						</div>
+						<a href="http://republic.se">{{entry.text}}</a>
 					{% endfor %}
 				</div>
 			</div>
-		</div>
-
 	</body>
 </html>

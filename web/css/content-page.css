@@ -3,6 +3,7 @@
 }
 
 .page-content-wrapper {
+  overflow: auto;
   max-width: 300px;
   margin: 0 auto;
   padding-top: 35px;
@@ -43,31 +44,17 @@ color:white;
   justify-content: start;
 }
 
-.prev{
-visibility: hidden;
-  width: 100px;
-  height: 100px;
-
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  margin: auto 10px;
-}
-.next{
-visibility: hidden;
-  width: 100px;
-  height: 100px;
-
-  position: absolute;
-  top:0;
-  bottom: 0;
-  right: 0;
-  margin: auto -70px;
-}
 
 .home-button{
        visibility: hidden;
+    }
+
+    .prev{
+    visibility:hidden;
+    }
+
+    .next{
+    visibility:hidden;
     }
 
 @media only screen and (min-width: 768px) {
@@ -86,11 +73,13 @@ visibility: hidden;
     position: absolute;
     top:0;
     bottom: 0;
-    right: 0;
+    right: 90;
 
     margin: auto 50px;
   }
   .next{
+  display: flex;
+    flex-direction: row-reverse;
   visibility: visible;
   width: 100px;
     height: 100px;
@@ -100,7 +89,7 @@ visibility: hidden;
     bottom: 0;
     right: 0;
 
-    margin: auto -30px;
+    margin: auto 45px;
   }
 
   .navbuttons-mobile{
@@ -118,12 +107,4 @@ visibility: hidden;
     max-width: 900px;
     padding-top: 70px;
   }
-    .prev{
-      margin: auto 30px;
-    }
-    .next{
-      margin: auto -50px;
-    }
-
-
 }

@@ -6,16 +6,23 @@
 
 	<div class="content-wrapper">
 			<div class="dropdown">
-				<div class="dropbtn">▼</div>
-				<div class="dropdown-content">
-					{% for entry in craft.entries.section("pages").all() %}
-						<a href="{{entry.url}}">
-							<div class="h1">
-								{{entry.rubrik}}
-							</div>
-						</a>
-					{% endfor %}
-				</div>
+				<div class="dropdown-btn">▼</div>
+					<div class="dropdown-content">
+						{% for entry in craft.entries.section("pages").all() %}
+
+							{% set assets = entry.ikon %}
+							{% if assets.Url is defined %}
+								{% for item in assets %}
+							<a href="{{entry.url}}">
+								<div class="row-items">
+									<img class="list-icon" src="{{ item.Url }}">
+									{{entry.rubrik}}
+								</div>
+							</a>
+							{% endfor %}
+							{% endif %}
+							{% endfor %}
+					</div>
 			</div>
 
 				<div class="pages-header-rubrik">
@@ -26,10 +33,9 @@
 
 	</div>
 </div>
-
-
-
 		{% endblock %}
+
+
 	<div class="page-nav">
 
 		{% set criteria = craft.entries.section('pages') %}
@@ -48,13 +54,13 @@
 			{% endif %}
 
 
-			{% if next %}
-				<div class="next">
-					<a href="{{ next.url }}">
-				<img  src="../ikoner/next.svg" >
-					</a>
-				</div>
-			{% endif %}
+		{% if prev %}
+			<div class="next">
+				<a href="{{ prev.url }}">
+					<img src="../ikoner/next.svg">
+				</a>
+			</div>
+		{% endif %}
 
 
 
