@@ -7,7 +7,7 @@
 	<div class="content-wrapper">
 			<div class="dropdown">
 				<div class="dropdown-btn">▼</div>
-					<div class="dropdown-content">
+				<div class="dropdown-content">
 						{% for entry in craft.entries.section("pages").all() %}
 
 							{% set assets = entry.ikon %}
@@ -21,8 +21,9 @@
 							</a>
 							{% endfor %}
 							{% endif %}
-							{% endfor %}
-					</div>
+						{% endfor %}
+				</div>
+
 			</div>
 
 				<div class="pages-header-rubrik">
@@ -45,7 +46,7 @@
 
 
 
-			{% if prev %}
+			{% if prev|length %}
 				<div class="prev">
 					<a href="{{ prev.url }}">
 						<img src="../ikoner/prev.svg">
@@ -54,13 +55,13 @@
 			{% endif %}
 
 
-		{% if prev %}
-			<div class="next">
-				<a href="{{ prev.url }}">
-					<img src="../ikoner/next.svg">
-				</a>
-			</div>
-		{% endif %}
+			{% if next|length %}
+				<div class="next">
+					<a href="{{ next.url }}">
+						<img src="../ikoner/next.svg">
+					</a>
+				</div>
+			{% endif %}
 
 
 
@@ -92,7 +93,7 @@
 					{% endif %}
 
 					{% if next %}
-						<a class="button" href="{{ next.url }}">Nästa inlägg</a>
+						<a class="button" href="{{ next.url }}">Nästa</a>
 					{% endif %}
 
 					{% if next %}

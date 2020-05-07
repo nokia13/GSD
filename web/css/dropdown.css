@@ -1,29 +1,21 @@
+.dropdown-content
+{
+  transition: 0.3s all ease-out;
 
-.dropdown-btn {
-  background: url(../ikoner/footer-bg.png);
-  color: white;
-  cursor: pointer;
-  margin-top: 19px;
-  padding-right: 17px;
-  padding-left: 14px;
-  font-size: 20px;
-
-}
-
-.dropdown-content {
-  display: none;
+  height: 0px;
+  overflow: hidden;
   position: absolute;
   background-color: #f9f9f9;
   font-family: 'Signika Negative', sans-serif;
-
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-size: 9.5px;
   margin-top: 16.3px;
-
 }
 
-.dropdown-content a {
+
+.dropdown-content a
+{
   color: black;
   padding-left: 16px;
   padding-right: 20px;
@@ -32,91 +24,51 @@
   display: block;
 }
 
-.dropdown-content a:hover {
+
+.dropdown:hover .dropdown-content
+{
+  height: 455px ;
+}
+
+
+.dropdown-content a:hover
+{
   background-color: white;
 }
 
-.row-items{
+
+.row-items
+{
   display: flex;
   align-items: center;
-
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
-.dropdown:hover .dropbtn {
-  background-color: black;
-}
-
-.list-icon{
+.list-icon
+{
   max-height: 20px;
   padding-right: 15px;
   padding-bottom: 5px;
 }
 
 
-/*
-.dropdown-content {
-  display: none;
-  position: absolute;
+.dropdown-btn
+{
   background: url(../ikoner/footer-bg.png);
-  font-family: 'Signika Negative', sans-serif;
-
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  font-size: 9.5px;
-  margin-top: 16.3px;
-
-}
-
-.dropdown-content a {
   color: white;
-  padding-left: 16px;
-  padding-right: 40px;
-  padding-top: 3px;
-  text-decoration: none;
-  display: block;
-
+  cursor: pointer;
+  margin-top: 19px;
+  padding-right: 17px;
+  padding-left: 14px;
+  font-size: 20px;
 }
 
-.dropdown-content a:hover {
-  background-color: white;
-  color: black;
-  -webkit-filter: invert(1%);
-}
 
-.row-items{
-  display: flex;
-  align-items: center;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.list-icon {
-  max-height: 20px;
-  padding-right: 15px;
-  padding-bottom: 5px;
-}
-
-.list-icon {
-  -webkit-filter: invert(100%);
-}
-
-*/
-
-@media only screen and (min-width: 768px) {
-
-  .dropdown-content a {
+@media only screen and (min-width: 768px)
+{
+  .dropdown-content a
+  {
     padding-right: 50px;
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .dropdown-content a {
-    padding-right: 50px;
-  }
-}
